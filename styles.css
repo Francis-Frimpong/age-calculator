@@ -1,0 +1,160 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: hsl(0, 0%, 94%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px 20px 100px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Layout */
+.date-inputs {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 90px;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: hsl(0, 1%, 44%);
+  margin-bottom: 0.3rem;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: hsl(259, 100%, 65%);
+}
+
+/* Submit Button */
+.submit-btn {
+  background: hsl(259, 100%, 65%);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 73px;
+  right: 0;
+  bottom: -30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: hsl(0, 0%, 8%);
+}
+
+.submit-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: hsl(0, 0%, 86%);
+  margin: 3rem 0 2rem;
+}
+
+/* Results Section */
+.results h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.results span {
+  color: hsl(259, 100%, 65%);
+}
+
+/* -------------------------
+   RESPONSIVE DESIGN
+------------------------- */
+
+/* Tablet Screens (≥ 768px) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .card {
+    padding: 3rem;
+    border-radius: 20px 20px 150px 20px;
+  }
+
+  .submit-btn {
+    width: 70px;
+    height: 70px;
+  }
+
+  .results h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Desktop Screens (≥ 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .date-inputs {
+    gap: 2rem;
+  }
+
+  input {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+  }
+
+  .results h1 {
+    font-size: 4rem;
+  }
+
+  .submit-btn {
+    width: 80px;
+    height: 80px;
+  }
+}
