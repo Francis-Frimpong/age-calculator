@@ -40,7 +40,9 @@ class DateCalculator {
     this.form.addEventListener("submit", (e) => {
       e.preventDefault();
       this.calculateAge();
-      //   console.log(this.day.value);
+      this.day.value = "";
+      this.month.value = "";
+      this.year.value = "";
     });
   }
 }
